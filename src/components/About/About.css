@@ -65,10 +65,6 @@
     color: var(--color-light);
 }
 
-section#about {
-    margin-bottom: -12rem;
-}
-
 /* =============Media Queries for Medium Devices============== */
 @media screen and (max-width: 1024px) {
    .about__container {
@@ -84,11 +80,6 @@ section#about {
    .about__content p {
        margin: 1rem 0 1.5rem;
    }
-
-   section#about {
-       height: 100%;
-       margin-bottom: -1rem;
-    }
 } 
 
 /* =============Media Queries for Small Devices============== */

@@ -40,6 +40,10 @@
     color: var(--color-primary);
 }
 
+section#experience {
+    margin-top: -5rem;
+}
+
 /* =============Media Queries for Medium Devices============== */
 @media screen and (max-width: 1024px) {
     .experience__container {
@@ -55,12 +59,21 @@
     .experience__content {
         padding: 1rem;
     }
+
+    section#experience {
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+    }
  } 
  
  /* =============Media Queries for Small Devices============== */
  @media screen and (max-width: 600px) {
     .experience__container > div {
         width: 100%;
+    }
+
+    section#experience {
+        margin-bottom: -20rem;
     }
  }
 

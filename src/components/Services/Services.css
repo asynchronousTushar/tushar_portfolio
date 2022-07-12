@@ -52,7 +52,7 @@
 }
 
 section#services {
-    margin-top: 3rem;
+    height: auto;
 }
 
 /* =============Media Queries for Medium Devices============== */
@@ -63,10 +63,6 @@ section#services {
 
     .service {
         height: auto;
-    }
-
-    section#services {
-        margin-top: 25rem;
     }
  } 
  
