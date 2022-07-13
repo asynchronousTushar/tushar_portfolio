@@ -36,7 +36,11 @@
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet-active {
-    background: var(--color-primary);
+    background: var(--color-primary-variant);
+}
+
+section#testimonials {
+    height: auto;
 }
 
 /* =============Media Queries for Medium Devices============== */
