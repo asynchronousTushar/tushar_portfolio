@@ -2,8 +2,22 @@ import './Contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { RiMessengerLine } from 'react-icons/ri';
 import { BsWhatsapp } from 'react-icons/bs';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendMail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+                alert("Message sent successfully.")
+            }, (error) => {
+                alert('Failed to send message.')
+            });
+    }
     return (
         <section id="contact">
             <h5>Get In Touch</h5>
@@ -30,9 +44,9 @@ const Contact = () => {
                     </article>
                 </div>
                 {/* ================ End of contact option ================ */}
-                <form action="">
-                    <input type="text" name="name" placeholder="Your Full Name" required/>
-                    <input type="email" name="email" placeholder="Your Email" required/>
+                <form ref={form} onSubmit={sendMail}>
+                    <input type="text" name="name" placeholder="Your Full Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
                     <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
                     <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>

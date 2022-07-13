@@ -92,6 +92,7 @@ a:hover {
     border-radius: .4rem;
     transition: var(--transition);
     cursor: pointer;
+    background: var(--color-bg);
 }
 
 .btn:hover {
